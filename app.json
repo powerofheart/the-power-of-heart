@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "hi",
-    "slug": "rnhello",
+    "name": "The Power Of Heart",
+    "slug": "poh",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
@@ -14,7 +14,7 @@
     "splash": {
       "image": "./assets/images/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#070707"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
