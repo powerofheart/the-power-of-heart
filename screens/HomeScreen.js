@@ -12,6 +12,7 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 import CharSelect from '../components/CharSelect';
+import LoginScreen from './LoginScreen';
 /*
 {
   name: '',
@@ -58,10 +59,11 @@ export default class HomeScreen extends React.Component {
     chars.push(char1);
     chars.push(char2);
     return (
-      <View style={styles.container}>
-      <Text>{JSON.stringify(chars)}</Text>
-        <CharSelect characters={chars}/>
-      </View>
+      // <View style={styles.container}>
+      <LoginScreen />
+      // {/* <Text>{JSON.stringify(chars)}</Text> */}
+        // {/* <CharSelect characters={chars}/> */}
+      // </View>
     );
   }
 }
