@@ -5,7 +5,7 @@ import Char from './Char';
 export default (props)=>{
   const charsArr = [];
   const {characters} = props;
-  characters.forEach(char => charsArr.push(<Char character={char} />));
+  characters.forEach((char, i) => charsArr.push(<Char character={char} key={i} />));
   return (
     <View>
       {charsArr}
