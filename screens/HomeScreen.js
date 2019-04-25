@@ -32,13 +32,14 @@ function TraitsConstructor(charm, cool, sharp, tough, weird) {
 }
 
 export default class HomeScreen extends React.Component {
-  /*
+
   static navigationOptions = {
-    title: 'Welcome baby!'
+    title: 'The Power of Heart'
   };
-  */
+
 
   render() {
+    const { navigate } = this.props.navigation;
     const chars = [];
     const traits1 = new TraitsConstructor(1, 2, 3, 4, 5);
     const traits2 = new TraitsConstructor(2, 1, 4, 3, 5);
@@ -48,7 +49,13 @@ export default class HomeScreen extends React.Component {
     chars.push(char2);
 
     return (
-      <LoginScreen />
+      <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "purple" }}>
+        <LoginScreen />
+        <Button
+          title="Go to Jane's profile"
+          onPress={() => navigate('CharacterSelect')}
+        />
+      </View>
     )
   }
 }
