@@ -31,9 +31,11 @@ function TraitsConstructor(charm, cool, sharp, tough, weird){
 }
 
 export default class HomeScreen extends React.Component {
+  /*
   static navigationOptions = {
     header: null,
   };
+  */
 
   render() {
     const chars = [];

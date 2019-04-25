@@ -2,7 +2,7 @@ import React from 'react';
 import {
   View,
   Text,
-  StyleSheet
+  StyleSheet,
 } from 'react-native';
 import CharContainer from './CharContainer';
 
@@ -10,10 +10,7 @@ export default (props)=>{
   const {characters} = props;
   return (
     <View style = {styles.swag}>
-      <Text>
-        Hello World
-      </Text>
-      <CharContainer characters = {characters} />
+      <CharContainer characters = {characters}/>
     </View>
   )
 }
