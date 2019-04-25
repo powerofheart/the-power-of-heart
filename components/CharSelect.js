@@ -2,18 +2,14 @@ import React from 'react';
 import {
   View,
   Text,
-  StyleSheet
+  StyleSheet,
 } from 'react-native';
-import CharContainer from './CharContainer';
+import Char from './Char';
 
 export default (props)=>{
   const {characters} = props;
   return (
     <View style = {styles.swag}>
-      <Text>
-        Hello World
-      </Text>
-      <CharContainer characters = {characters} />
     </View>
   )
 }
