@@ -3,21 +3,16 @@ import {
   Text,
   View,
   Button,
-  FormInput,
   StyleSheet,
+  TextInput
 } from 'react-native';
 
 export default class LoginScreen extends Component {
-  state = {
-    isRegistered: true,
-  }
-
   static navigationOptions = {
     title: 'Login',
   }
 
   registerClicked = () => {
-    this.setState({ isRegistered: false })
   }
 
   loginUser = () => {
@@ -27,17 +22,12 @@ export default class LoginScreen extends Component {
   render() {
     let buttonContent = 'Login';
     let emailField = null;
-    if (!state.isRegistered) {
-      emailField = <FormInput></FormInput>
-      buttonContent = 'Create Account';
-    }
     return (
       <View styles={ styles.container }>
         <Text>The Power of Heart</Text>
-          <FormInput></FormInput>
-          <FormInput></FormInput>
-          { emailField }
-          <Button onPress={ this.loginUser } title={ buttonContent } />
+          <TextInput placeholder="username"/>
+          <TextInput placeholder="password"/>
+          <Button onPress={ this.loginUser } title='Log in' />
           <Button onPress={ this.registerClicked } title='Register' />
       </View>
     )

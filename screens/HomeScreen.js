@@ -14,6 +14,7 @@ import { WebBrowser } from 'expo';
 
 import { MonoText } from '../components/StyledText';
 import CharSelect from '../components/CharSelect';
+import LoginScreen from './LoginScreen';
 
 function CharConstructor(name, charClass, desc, traits, moves){
   this.name = name;
@@ -47,9 +48,7 @@ export default class HomeScreen extends React.Component {
     chars.push(char2);
 
     return (
-      <View style={{flex:1,flexDirection: 'column'}}>
-        <CharSelect characters={chars}/>
-      </View>
-    );
+      <LoginScreen />
+    )
   }
 }
