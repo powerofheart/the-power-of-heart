@@ -6,7 +6,7 @@ import ButtonComponent from './ButtonComponent';
 export default (props)=>{
   const charsArr = [];
   const {characters} = props;
-  characters.forEach((char, i) => charsArr.push(<Char character={char} key={i + 'hey'}/>));
+  characters.forEach((char, i) => charsArr.push(<Char character={char} key={i} />));
   return (
     <View>
       <Button 

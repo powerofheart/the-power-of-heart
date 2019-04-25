@@ -9,6 +9,7 @@ import CharSelectScreen from '../screens/CharSelectScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import MoveSetSelectionScreen from '../screens/MoveSetSelectionScreen';
 
+import GameScreen from '../screens/GameScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -44,7 +45,22 @@ SettingsStack.navigationOptions = {
   ),
 };
 
+const DevStack = createStackNavigator({
+  Dev: GameScreen,
+});
+
+DevStack.navigationOptions = {
+  tabBarLabel: 'Dev',
+  tabBarIcon: ({ focused }) => (
+    <TabBarIcon
+      focused={focused}
+      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+    />
+  ),
+};
+
 export default createBottomTabNavigator({
   HomeStack,
   SettingsStack,
+  DevStack
 });

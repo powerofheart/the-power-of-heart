@@ -13,19 +13,21 @@ export default class ClassScreen extends Component {
   render() {
 
     return (
-      <View>
-        <TextInput 
-          onChangeText={ name => this.setState({ name }) }
-        />
-        <TextInput 
-          multiLine = { true }
-          numberOfLines = { 10 }
-          placeholder=''
-          onChangeText={ desc => this.setState({ desc }) }
-          value={ this.state.desc }
-        />
-      </View>
-      <Button>NEXT</Button>
+      <>
+        <View>
+          <TextInput 
+            onChangeText={ name => this.setState({ name }) }
+          />
+          <TextInput 
+            multiLine = { true }
+            numberOfLines = { 10 }
+            placeholder=''
+            onChangeText={ desc => this.setState({ desc }) }
+            value={ this.state.desc }
+          />
+        </View>
+        <Button>NEXT</Button>
+      </>
     );
   }
 }
