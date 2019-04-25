@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  View,
   Button,
   Image,
   Text
@@ -7,29 +8,22 @@ import {
 
 export default (props)=>{
   const charsArr = [];
-  const {characters} = props;
-  characters.forEach((char) =>{ 
-    const {name, charClass, desc, traits, moves} = char;
+  props.characters.forEach((char) =>{ 
+    const {name, charClass, desc, traits, moves, level} = char;
     charsArr.push(
-    <Text key={char.name}>
+    <View key={char.name}>
+      <Text>
       {name} 
       {charClass} 
-      {desc} 
-      {JSON.stringify(traits)} 
-      {JSON.stringify(moves)} 
-    </Text>
+      {level}
+      </Text>
+    </View>
   ) 
 
   })
-  const {name, desc, charClass, traits, img, moves} = props.character;
   return (
     <View>
-      <View>
-        {charsArr}
-      </View>
-      <Button>
-      </Button>
+      {charsArr}
     </View>
-
   )
 }
