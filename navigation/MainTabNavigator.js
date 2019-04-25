@@ -7,9 +7,13 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import CharSelectScreen from '../screens/CharSelectScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import MoveSetSelectionScreen from '../screens/MoveSetSelectionScreen';
+
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
+  MoveSetSelection: MoveSetSelectionScreen,
+  CharacterSelect: CharSelectScreen
 });
 
 HomeStack.navigationOptions = {
@@ -22,20 +26,6 @@ HomeStack.navigationOptions = {
           ? `ios-information-circle${focused ? '' : '-outline'}`
           : 'md-information-circle'
       }
-    />
-  ),
-};
-
-const CharacterSelectStack = createStackNavigator({
-  CharacterSelect: CharSelectScreen
-});
-
-CharacterSelectStack.navigationOptions = {
-  tabBarLabel: 'Characters',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
     />
   ),
 };
@@ -56,6 +46,5 @@ SettingsStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  CharacterSelectStack,
   SettingsStack,
 });

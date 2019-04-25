@@ -52,8 +52,12 @@ export default class HomeScreen extends React.Component {
       <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "purple" }}>
         <LoginScreen />
         <Button
-          title="Go to Jane's profile"
+          title="Go to Character Select"
           onPress={() => navigate('CharacterSelect')}
+        />
+        <Button
+          title="Go to MoveSet"
+          onPress={() => navigate('MoveSetSelection')}
         />
       </View>
     )
