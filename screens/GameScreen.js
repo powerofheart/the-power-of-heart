@@ -3,16 +3,23 @@ import {
   Image,
   Text,
   View,
+  Button,
 } from 'react-native';
 
-import styles from '../styles/gameScreen.scss';
+// import styles from '../styles/gameScreen.scss';
 // import styles from '../styles/_colors.scss';
 
 export default class GameScreen extends React.Component {
   constructor() {
     super()
     this.state = {
-      moveList: [ 'kick', 'punch', 'cry' ]
+      moveList: [ 'kick', 'punch', 'cry' ],
+      harmCount: 5,
+      luckCount: 3,
+      charmCount: 2,
+      sharpCount: 1,
+      toughCount: -1,
+      weirdCount: 1
     }
   }
 
@@ -24,25 +31,26 @@ export default class GameScreen extends React.Component {
     })
     return (
       <View>
-        <Image />
         <View>
-          <Text style={styles.test}>Name  |  { charClass }</Text>
-          <Text>Harm: { harmCount }</Text>
-          <Text>Luck: { luckCount }</Text> 
+          <View>
+            <Text>Name  |  { this.state.charClass }</Text>
+            <Text>Harm: { this.state.harmCount }</Text>
+            <Text>Luck: { this.state.luckCount }</Text> 
+          </View>
         </View>
-      </View>
-      <Text>
-        Charm: { charmCount }  
-        |  Cool: { coolCount }  
-        |  Sharp: { sharpCount }  
-        |  Tough: { toughCount }  
-        |  Weird: { weirdCount }
-      </Text>
-      <Text>Character Move List</Text>
-      { moveListArray }
-      <View>
-        <Button>Back</Button>
-        <Button>Roll</Button>
+        <Text>
+          Charm: { this.state.charmCount }  
+          |  Cool: { this.state.coolCount }  
+          |  Sharp: { this.state.sharpCount }  
+          |  Tough: { this.state.toughCount }  
+          |  Weird: { this.state.weirdCount }
+        </Text>
+        <Text>Character Move List</Text>
+        { moveListArray }
+        <View>
+          <Button title='BACK' />
+          <Button title='ROLL' />
+        </View>
       </View>
     )
 

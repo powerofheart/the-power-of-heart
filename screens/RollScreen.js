@@ -6,23 +6,22 @@ export default class RollScreen extends Component {
     super()
     this.state= {
       roll: 0,
-      moveName: '',
-      moveDesc: ''
+      moveName: 'Meow.',
+      moveDesc: 'An attack of apathy.'
     }
   }
 
   render() {
 
     return (
-      <>
+      <View>
         <View>
-          <Image />
-          <Text>{ moveName }</Text>
-          <Text>{ moveDesc }</Text>
+          <Text>{ this.state.roll }</Text>
+          <Text>{ this.state.moveName }</Text>
+          <Text>{ this.state.moveDesc }</Text>
         </View>
-        <Button>BACK</Button>
-      </>
+        <Button title='BACK' />
+      </View>
     );
   }
 }
-

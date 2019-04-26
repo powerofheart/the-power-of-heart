@@ -28,7 +28,7 @@ export default class ClassScreen extends Component {
         <View>
          { classArray }
         </View>
-        <Button>NEXT</Button>
+        <Button title='NEXT' />
       </View>
     );
   }
