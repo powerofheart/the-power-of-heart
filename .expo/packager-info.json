@@ -1,9 +1,9 @@
 {
-  "expoServerPort": 19000,
-  "expoServerNgrokUrl": "https://2a-krw.anonymous.the-power-of-heart-1.exp.direct",
-  "packagerNgrokUrl": "https://packager.2a-krw.anonymous.the-power-of-heart-1.exp.direct",
-  "ngrokPid": 31931,
   "devToolsPort": 19002,
-  "packagerPort": 19003,
-  "packagerPid": 31910
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
